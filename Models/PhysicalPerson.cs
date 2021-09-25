@@ -16,6 +16,7 @@ namespace EF_CRUD.Models
         public string FirstMidName { get; set; }
         
         [Required]
+        [RegularExpression("^\\d{3}\\.\\d{3}\\.\\d{3}\\-\\d{2}$", ErrorMessage ="Enter a value in the format 111.111.111-11")]
         public string CPF {get; set;}
         
         [Required]

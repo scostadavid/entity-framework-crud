@@ -35,6 +35,7 @@ namespace EF_CRUD.Models
 
         [Required]
         [Display(Name = "Address Number")]
+        [Range(0,99999)]
         public int AddressNumber  { get; set; }
         
         [Required]
