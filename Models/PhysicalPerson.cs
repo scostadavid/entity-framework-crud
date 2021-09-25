@@ -7,9 +7,21 @@ namespace EF_CRUD.Models
 {
     public class PhysicalPerson : Client
     {
+        [Required]
+        [Display(Name = "Last Name")]
         public string LastName { get; set; }
+        
+        [Required]
+        [Display(Name = "First Name")]
         public string FirstMidName { get; set; }
+        
+        [Required]
         public string CPF {get; set;}
+        
+        [Required]
+        [Display(Name = "Birth Date")]
+        [DataType(DataType.DateTime)]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
         public DateTime BirthDate {get; set; }
     }
 }

@@ -5,21 +5,27 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace EF_CRUD.Models
 {
+    public enum PhoneType 
+    {
+        CELL_PHONE, RESIDENTIAL, COMMERCIAL
+    }
     public class Phone
     {
-        public enum PhoneType 
-        {
-            CELL_PHONE, RESIDENTIAL, COMMERCIAL
-        }
 
         [Key]
         public int PhoneID {get; set; }
-        public string PhoneNumber {get; set;}
-        public PhoneType Type {get; set;}
 
+        [Required]
+        [Display(Name = "Phone Number")]
+        public string PhoneNumber {get; set;}
+
+        [Required]
+        [Display(Name = "Phone Type")]
+        public PhoneType PhoneType {get; set;}
 
         // Client relationship
         public int ClientID { get; set; }
-        public virtual Client Client { get; set; }
+        [Required]
+        public Client Client { get; set; }
     }
 }

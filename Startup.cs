@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.EntityFrameworkCore;
 
 namespace EF_CRUD
 {
@@ -24,6 +25,9 @@ namespace EF_CRUD
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+
+            services.AddDbContext<DatabaseContext>(options =>
+                    options.UseSqlite(Configuration.GetConnectionString("DatabaseContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
