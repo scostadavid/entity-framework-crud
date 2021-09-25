@@ -43,6 +43,7 @@ namespace EF_CRUD.Models
         public AdressType AdressType {get; set; }
         
         // Client relationship
+        [Display(Name = "Client  ID")]
         public int ClientID { get; set; }
         public Client Client { get; set; }
     }

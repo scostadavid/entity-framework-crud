@@ -24,8 +24,8 @@ namespace EF_CRUD.Models
         public PhoneType PhoneType {get; set;}
 
         // Client relationship
+        [Display(Name = "Client ID")]
         public int ClientID { get; set; }
-        [Required]
         public Client Client { get; set; }
     }
 }

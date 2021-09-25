@@ -14,7 +14,7 @@ namespace EF_CRUD.Models
     {
         [Key]
         public int ClientID {get; set;}
-        
+        //
         public ICollection<Phone> Phones { get; set; }
         public ICollection<Adress> Addresses { get; set; }
     }
