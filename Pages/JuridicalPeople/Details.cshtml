@@ -1,0 +1,37 @@
+@page
+@model EF_CRUD.Pages.JuridicalPeople.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>JuridicalPerson</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.JuridicalPerson.CompanyName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.JuridicalPerson.CompanyName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.JuridicalPerson.TradeName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.JuridicalPerson.TradeName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.JuridicalPerson.CNPJ)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.JuridicalPerson.CNPJ)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.JuridicalPerson.ClientID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
