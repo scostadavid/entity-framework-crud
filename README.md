@@ -1,4 +1,4 @@
-# 🦐 EF_CRUD
+# 🦐 Entity Framework CRUD
 
 .NET Entity Framework CRUD with Razor engine.
 
@@ -47,4 +47,4 @@ https://localhost:5001/
 
 ## 👨‍💻 Maintainers/Contributors
 
-* David Costa - [ds.costa@unesp.br](mailto:ds.costa@unesp.br)
+* David Costa - [scostadavid@proton.me](mailto:scostadavid@proton.me)
